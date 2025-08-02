@@ -63,7 +63,7 @@ pub const Cron = struct {
         };
     }
 
-    pub fn get_datetime(_: *Self) datetime {
+    pub fn get_datetime(_: *Self) @type(datetime) {
         return datetime;
     }
 
