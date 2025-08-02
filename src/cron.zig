@@ -63,6 +63,10 @@ pub const Cron = struct {
         };
     }
 
+    pub fn get_datetime(_: *Self) datetime {
+        return datetime;
+    }
+
     /// Parse cron expression
     pub fn parse(self: *Self, input: []const u8) !void {
         var buf_: [LEN]u8 = undefined;
