@@ -49,6 +49,8 @@ const LEN = 48;
 ///     }
 /// }
 /// ```
+pub const Datetime = datetime.Datetime;
+
 pub const Cron = struct {
     buf: [LEN]u8,
     expr: CronExpr,
@@ -61,10 +63,6 @@ pub const Cron = struct {
             .buf = undefined,
             .expr = undefined,
         };
-    }
-
-    pub fn get_datetime(_: *Self) @TypeOf(datetime) {
-        return datetime;
     }
 
     /// Parse cron expression
