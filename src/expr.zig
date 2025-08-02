@@ -376,7 +376,7 @@ pub const CronField = struct {
         }
 
         if (self.tag == .YEAR_OFFSET) {
-            return self.allowed.isSet(value - EPOCH);
+            return self.allowed.isSet(@as(usize, @intCast(value))) - EPOCH);
         }
         return self.allowed.isSet(value);
     }
