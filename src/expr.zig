@@ -369,7 +369,7 @@ pub const CronField = struct {
                     allowed.set(0);
                 }
 
-                if (allowed.isSet(value)) {
+                if (allowed.isSet(@as(usize, @intCast(value)))) {
                     return true;
                 }
             }
